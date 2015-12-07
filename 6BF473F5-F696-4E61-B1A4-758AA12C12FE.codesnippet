@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>hget</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>ClassImplementation</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>-(NSDictionary *)httpRequest:(NSString *)info
+{
+  mResponseReceived = dispatch_semaphore_create(0);
+  dispatch_time_t timeout = DISPATCH_TIME_FOREVER;
+  
+//  WebUser *user = [[WebUser alloc] init];
+  NSDictionary* dictionary = [NSDictionary dictionary];
+  __block NSDictionary *dictionaryB = dictionary;
+  
+  NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
+  [request setURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://%@", info]]];
+  [request setHTTPMethod:@"GET"];
+  
+  // if POST
+  // NSDictionary *parameters = [NSDictionary dictionaryWithObjectsAndKeys:@"1234", @"USER_ID", nil];
+  // NSData *jsonData = [NSJSONSerialization dataWithJSONObject:parameters options:0 error:nil];
+  // [request setHTTPBody:jsonData];
+  
+  NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
+  [[session dataTaskWithRequest:request
+              completionHandler:^(NSData *data, NSURLResponse *response, NSError *error)
+    
+    {
+      NSLog(@"%@", [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]);
+      dictionaryB = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&amp;error];
+      
+      // user.userId = [(NSNumber *)[dictionary objectForKey:@"id"] stringValue];
+      // user.userName = (NSString *)[dictionary objectForKey:@"name"];
+      // user.friends = (NSArray *)[dictionary objectForKey:@"friends"];
+      
+      dispatch_semaphore_signal(mResponseReceived);
+    }
+    
+    ] resume];
+  
+  
+  if (dispatch_semaphore_wait(mResponseReceived, timeout))
+  {
+    // timed out
+  }
+  
+  return dictionary;
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>6BF473F5-F696-4E61-B1A4-758AA12C12FE</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>For interview tests and the like.</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Stadard HTTP GET request</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

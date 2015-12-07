@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>swtable</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>extension &lt;#MyView#&gt;: UITableViewDataSource, UITableViewDelegate {
+    
+    func numberOfSectionsInTableView(tableView: UITableView) -&gt; Int {
+        return 1
+    }
+    
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -&gt; CGFloat {
+        // guard indexPath.section != 0 else {
+        //     return CGFloat(300.0)
+        // }
+        return CGFloat(35.0)
+    }
+    
+    
+    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -&gt; CGFloat {
+        // guard section != 0 else {
+        //     return CGFloat(0.0)
+        // }
+        return CGFloat(35.0)
+    }
+    
+    func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -&gt; String? {
+        // guard section != 0 else {
+        //     return nil
+        // }
+        return "Header"
+    }
+    
+    func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -&gt; UIView? {
+        // guard section != 0 else {
+        //     return nil
+        // }
+        
+        let cell = tableView.dequeueReusableCellWithIdentifier(Const.&lt;#MySectionCell#&gt;) as! &lt;#MySectionCell#&gt;
+        
+        // cell setup goes here
+        return cell
+    }
+    
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -&gt; Int {
+        // guard section != 0 else {
+        //     return 1
+        // }
+        
+        return 1
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -&gt; UITableViewCell {
+        // guard let count = comments?.count where count &gt; 0 else { }
+        
+        // guard indexPath.section != 0 else {
+        //     let cell = tableView.dequeueReusableCellWithIdentifier(Const.&lt;#MyHeaderCell#&gt;, forIndexPath: indexPath) as! &lt;#MyHeaderCell#&gt;
+        //     return cell
+        // }
+        
+        let cell = tableView.dequeueReusableCellWithIdentifier(Const.&lt;#MyRowCell#&gt;) as! &lt;#MyRowCell#&gt;
+
+        // cell setup goes here
+        
+        return cell
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        // do nothing
+    }
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>73F4B33E-2DE0-4B61-94E5-6AFEBD1AC37F</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Swift UITableView Protocol Extension</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>swview</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>import UIKit
+
+class &lt;#MyView#&gt;: UIView {
+    
+    // =========================================================================
+    // Enums/Structs
+    // =========================================================================
+    
+    private struct Const {
+        static let ConstValue = "Const"
+    }
+    
+    // =========================================================================
+    // IBOutlets - Refs/Funcs
+    // =========================================================================
+
+    // =========================================================================
+    // Vars
+    // =========================================================================
+    
+    // =========================================================================
+    // Funcs - Overridden
+    // =========================================================================
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        setup()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        setup()
+    }
+    
+    // =========================================================================
+    // Funcs - Private
+    // =========================================================================
+    
+    private func setup() {
+    }
+    
+    // =========================================================================
+    // Funcs - Public
+    // =========================================================================
+    
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>EC3EB234-958B-42CF-B3B7-FFECDA6554A9</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Swift UIView Stub</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
