@@ -2,24 +2,21 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>swift-quickdivider</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>ClassImplementation</string>
+		<string>CodeBlock</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>    // =========================================================================
-    // &lt;#TITLE#&gt;
-    // =========================================================================</string>
+	<string>        let viewController = UIViewController()
+        let navigationController = NavigationController(rootViewController: viewController)
+        presentViewController(navigationController, animated: true) { () in
+        }</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>EC6CCFA6-2FB2-46A8-A0FC-3F4B47D250C1</string>
+	<string>C8F5F0D9-A78F-4C9B-9F79-32B756B86B60</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
-	<key>IDECodeSnippetSummary</key>
-	<string>A quick divider comment to keep organized.</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>Swift - Quick Divider</string>
+	<string>Swift - Present </string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

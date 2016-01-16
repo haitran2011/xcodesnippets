@@ -2,22 +2,18 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>swift-view</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>All</string>
+		<string>TopLevel</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>class &lt;#MyView#&gt;: UIView {
-    
+	<string>import UIKit
+
+class LoginRegisterViewController: UIViewController {
+
     // =========================================================================
     // Enums/Structs
     // =========================================================================
-    
-    private struct Const {
-        static let ConstValue = "Const"
-    }
     
     // =========================================================================
     // IBOutlets - Refs/Funcs
@@ -31,45 +27,30 @@
     // Funcs - Overridden
     // =========================================================================
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        setup()
-        layout()
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        view.backgroundColor = UIColor.redColor()
     }
-    
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        setup()
-        layout()
-    }
-    
-    override func layoutSubviews() {
-        super.layoutSubviews()
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
     }
     
     // =========================================================================
     // Funcs - Private
     // =========================================================================
     
-    private func setup() {
-    }
-    
-    private func layout() {
-    }
-    
     // =========================================================================
     // Funcs - Public
     // =========================================================================
-    
+
 }</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>EC3EB234-958B-42CF-B3B7-FFECDA6554A9</string>
+	<string>E4D06DFF-275D-41E8-9E10-11D6F42E9FBE</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
-	<key>IDECodeSnippetSummary</key>
-	<string>Creates a UIView child class stub.</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>Swift - UIView stub</string>
+	<string>My Code Snippet</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

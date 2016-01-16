@@ -3,23 +3,23 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>swift-quickdivider</string>
+	<string>swift-quickmark</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>ClassImplementation</string>
+		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>    // =========================================================================
-    // &lt;#TITLE#&gt;
-    // =========================================================================</string>
+	<string>// =============================================================================
+// MARK: - &lt;#Section#&gt;
+// =============================================================================</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>EC6CCFA6-2FB2-46A8-A0FC-3F4B47D250C1</string>
+	<string>C482070E-5250-4E4B-AD79-68EB9CB32233</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetSummary</key>
-	<string>A quick divider comment to keep organized.</string>
+	<string>Quick mark in easy to read dividers.</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>Swift - Quick Divider</string>
+	<string>Swift - Quick Mark</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

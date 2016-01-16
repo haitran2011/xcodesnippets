@@ -3,73 +3,110 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>swift-view</string>
+	<string>swift-viewcontroller-model</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>class &lt;#MyView#&gt;: UIView {
+	<string>import KitKap
+import UIKit
+
+class MyViewController: UIViewController {
     
     // =========================================================================
     // Enums/Structs
     // =========================================================================
     
     private struct Const {
-        static let ConstValue = "Const"
+        static let Const = "Const"
     }
-    
-    // =========================================================================
-    // IBOutlets - Refs/Funcs
-    // =========================================================================
     
     // =========================================================================
     // Vars
     // =========================================================================
     
+    private var viewModel: MyViewModel?
+    private weak var rootDelegate: RootViewControllerDelgate?
+    
     // =========================================================================
     // Funcs - Overridden
     // =========================================================================
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
+    convenience init(root: RootViewControllerDelgate?) {
+        self.init(viewModel: MyViewModel(), root: root)
+    }
+    
+    init(viewModel: MyViewModel, root: RootViewControllerDelgate?) {
+        super.init(nibName: nil, bundle: nil)
+        self.viewModel = viewModel
+        self.rootDelegate = root
         setup()
         layout()
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        setup()
-        layout()
     }
     
-    override func layoutSubviews() {
-        super.layoutSubviews()
+    override func viewDidLoad() {
+        super.viewDidLoad()
     }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+    }
+    
+    override func viewDidDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+    }
+    
+    deinit { }
     
     // =========================================================================
     // Funcs - Private
     // =========================================================================
     
     private func setup() {
+        // internal setup
     }
     
     private func layout() {
+        // layout stuff
     }
     
     // =========================================================================
     // Funcs - Public
     // =========================================================================
     
+    func setup(&lt;#type#&gt;: &lt;#Type#&gt;) {
+        // setup after alloc/init
+    }
+}
+
+extension MyViewController: MyViewModelDelegate {
+    func doSomething() { }
 }</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>EC3EB234-958B-42CF-B3B7-FFECDA6554A9</string>
+	<string>EF18E58C-55CF-4AB9-9C1E-4C78656197E9</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetSummary</key>
-	<string>Creates a UIView child class stub.</string>
+	<string>View controller that implements a view model and a root delegate.</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>Swift - UIView stub</string>
+	<string>Swift - UIViewController ViewModel - stub</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

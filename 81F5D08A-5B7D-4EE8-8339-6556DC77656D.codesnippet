@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>swift-navcontroller</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>TopLevel</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>import UIKit
+
+class NavigationController: UINavigationController {
+    
+    override init(navigationBarClass: AnyClass?, toolbarClass: AnyClass?) {
+        super.init(navigationBarClass: navigationBarClass, toolbarClass: toolbarClass)
+        
+    }
+    
+    override init(rootViewController: UIViewController) {
+        super.init(rootViewController: rootViewController)
+        
+    }
+    
+    override init(nibName: String?, bundle: NSBundle?) {
+        super.init(nibName: nibName, bundle: bundle)
+        
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        navigationBar.applyTheme(.Normal)
+    }
+    
+    var statusBarStyle: UIStatusBarStyle = .LightContent {
+        didSet { setNeedsStatusBarAppearanceUpdate() }
+    }
+    
+    override func preferredStatusBarStyle() -&gt; UIStatusBarStyle {
+        return statusBarStyle
+    }
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>81F5D08A-5B7D-4EE8-8339-6556DC77656D</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>Convenience stub for UINavigationController</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Swift - UINavigationController stub</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

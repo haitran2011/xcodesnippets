@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>sqr</string>
+	<string>swift-organizer</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>ClassImplementation</string>
@@ -36,8 +36,10 @@
 	<string>86D25795-F383-4ADD-A65F-024C87FEA65A</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>Dividing comments to orgainize vars, funcs etc.</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>Swift Class Organiser</string>
+	<string>Swift - Class Organizer</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

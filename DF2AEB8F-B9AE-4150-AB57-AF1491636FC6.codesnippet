@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>swift-constraints-huggingparentzero</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>        addSubviewNoAuto(myView)
+        NSLayoutConstraint.activateConstraints([
+            myView.topAnchor.constraintEqualToAnchor(myView.superview?.topAnchor),
+            myView.bottomAnchor.constraintEqualToAnchor(myView.superview?.bottomAnchor),
+            myView.leftAnchor.constraintEqualToAnchor(myView.superview?.leftAnchor),
+            myView.rightAnchor.constraintEqualToAnchor(myView.superview?.rightAnchor)
+            ])</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>DF2AEB8F-B9AE-4150-AB57-AF1491636FC6</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>View is added as a subview, with zero hugging constraints added to parent.</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Swift - Constraints - hugging parent zero</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

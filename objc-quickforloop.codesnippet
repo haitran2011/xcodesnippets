@@ -3,23 +3,24 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>swift-quickdivider</string>
+	<string>c-forloop</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>ClassImplementation</string>
+		<string>CodeBlock</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>    // =========================================================================
-    // &lt;#TITLE#&gt;
-    // =========================================================================</string>
+	<string>for (int i = 0; i &lt; &lt;#max#&gt;; i++)
+{
+    &lt;#statements#&gt;
+}</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>EC6CCFA6-2FB2-46A8-A0FC-3F4B47D250C1</string>
+	<string>04F1DC1E-4BCE-4304-A358-395190C9BBC4</string>
 	<key>IDECodeSnippetLanguage</key>
-	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<string>Xcode.SourceCodeLanguage.C</string>
 	<key>IDECodeSnippetSummary</key>
-	<string>A quick divider comment to keep organized.</string>
+	<string>Quick for loop shortcut.</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>Swift - Quick Divider</string>
+	<string>C - quick for loop</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

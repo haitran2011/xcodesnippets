@@ -3,49 +3,43 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>swift-view</string>
+	<string>swift-viewmodel</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>class &lt;#MyView#&gt;: UIView {
+	<string>protocol MyViewModelDelegate: class {
+    func myFunc()
+}
+
+class MyViewModel {
     
     // =========================================================================
     // Enums/Structs
-    // =========================================================================
-    
-    private struct Const {
-        static let ConstValue = "Const"
-    }
-    
-    // =========================================================================
-    // IBOutlets - Refs/Funcs
     // =========================================================================
     
     // =========================================================================
     // Vars
     // =========================================================================
     
+    weak var delegate: MyViewModelDelegate?
+    private var dataController: MyDataController? // init here?
+    
     // =========================================================================
     // Funcs - Overridden
     // =========================================================================
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        setup()
-        layout()
+    convenience init() {
+        self.init(dataController: MyDataController())
     }
     
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
+    init(dataController: MyDataController) {
+        self.dataController = dataController
+        self.dataController?.delegate = self
         setup()
-        layout()
     }
     
-    override func layoutSubviews() {
-        super.layoutSubviews()
-    }
     
     // =========================================================================
     // Funcs - Private
@@ -54,22 +48,30 @@
     private func setup() {
     }
     
-    private func layout() {
+    // =========================================================================
+    // Funcs - Public - External
+    // =========================================================================
+    
+    func facebookLogin() {
+        dataController?.facebookAuth()
     }
     
-    // =========================================================================
-    // Funcs - Public
-    // =========================================================================
-    
+    func googleLogin() {
+        dataController?.googleLogin()
+    }
+}
+
+extension MyViewModel: MyDataControllerDelegate {
+    func myFunc{}
 }</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>EC3EB234-958B-42CF-B3B7-FFECDA6554A9</string>
+	<string>9ADF7424-CD30-48B6-B12B-A2595C6BBAB3</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetSummary</key>
-	<string>Creates a UIView child class stub.</string>
+	<string>Stub for a View Model.</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>Swift - UIView stub</string>
+	<string>Swift - ViewModel stub</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

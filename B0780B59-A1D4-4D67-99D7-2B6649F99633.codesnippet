@@ -3,20 +3,22 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>swift-view</string>
+	<string>swift-viewcontroller</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>All</string>
+		<string>TopLevel</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>class &lt;#MyView#&gt;: UIView {
+	<string>import UIKit
+
+class &lt;#MyViewController#&gt;: UIViewController {
     
     // =========================================================================
     // Enums/Structs
     // =========================================================================
     
     private struct Const {
-        static let ConstValue = "Const"
+        static let Const = "Const"
     }
     
     // =========================================================================
@@ -31,45 +33,68 @@
     // Funcs - Overridden
     // =========================================================================
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
+    convenience init(&lt;#type#&gt;: &lt;#Type#&gt;) {
+        self.init()
         setup()
+        setup(type)
         layout()
     }
     
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        setup()
-        layout()
+    override func viewDidLoad() {
+        super.viewDidLoad()
     }
     
-    override func layoutSubviews() {
-        super.layoutSubviews()
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
     }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+    }
+    
+    override func viewDidDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+    }
+    
+    deinit { }
     
     // =========================================================================
     // Funcs - Private
     // =========================================================================
     
     private func setup() {
+        // internal setup
     }
     
     private func layout() {
+        // layout stuff
     }
     
     // =========================================================================
     // Funcs - Public
     // =========================================================================
     
+    func setup(&lt;#type#&gt;: &lt;#Type#&gt;) {
+        // setup after alloc/init
+    }
+    
 }</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>EC3EB234-958B-42CF-B3B7-FFECDA6554A9</string>
+	<string>B0780B59-A1D4-4D67-99D7-2B6649F99633</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetSummary</key>
-	<string>Creates a UIView child class stub.</string>
+	<string>Convenience stub for a UIViewController.</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>Swift - UIView stub</string>
+	<string>Swift - UIViewController stub</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

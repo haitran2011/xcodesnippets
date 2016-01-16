@@ -3,23 +3,24 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>swift-quickdivider</string>
+	<string>swift-uiviewnavpresent</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>ClassImplementation</string>
+		<string>CodeBlock</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>    // =========================================================================
-    // &lt;#TITLE#&gt;
-    // =========================================================================</string>
+	<string>        let &lt;#viewController#&gt; = UIViewController()
+        let &lt;#navigationController#&gt; = UINavigationController(rootViewController: &lt;#viewController#&gt;)
+        presentViewController(&lt;#navigationController#&gt;, animated: true) { () in
+        }</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>EC6CCFA6-2FB2-46A8-A0FC-3F4B47D250C1</string>
+	<string>8886E226-8274-47C6-A0C9-9EA591C874D2</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetSummary</key>
-	<string>A quick divider comment to keep organized.</string>
+	<string>Init a UIViewController and UINavigationController and present from the current view.</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>Swift - Quick Divider</string>
+	<string>Swift - Present UIView/NavigationController</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

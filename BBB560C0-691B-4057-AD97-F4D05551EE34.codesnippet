@@ -3,23 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>swift-quickdivider</string>
+	<string>swift-letuiview</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>ClassImplementation</string>
+		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>    // =========================================================================
-    // &lt;#TITLE#&gt;
-    // =========================================================================</string>
+	<string>let &lt;#view#&gt; = UIView(frame: CGRectZero)</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>EC6CCFA6-2FB2-46A8-A0FC-3F4B47D250C1</string>
+	<string>BBB560C0-691B-4057-AD97-F4D05551EE34</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetSummary</key>
-	<string>A quick divider comment to keep organized.</string>
+	<string>Shortcut to let a UIView with CGRectZero</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>Swift - Quick Divider</string>
+	<string>Swift - let UIView</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

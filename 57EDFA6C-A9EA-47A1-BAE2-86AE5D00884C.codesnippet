@@ -3,24 +3,38 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>fc</string>
+	<string>swift-singleton</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>CodeBlock</string>
+		<string>TopLevel</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>for (int i = 0; i &lt; &lt;#max#&gt;; i++)
-  {
-      &lt;#statements#&gt;
-  }</string>
+	<string>class &lt;#Singleton#&gt;: NSObject {
+    
+    private struct Const {
+    }
+    
+    static let singleton = &lt;#Singleton#&gt;()
+    
+    private override init() {
+        super.init()
+        setup()
+    }
+    
+    private func setup() {
+        // setup here
+    }
+}
+
+</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>04F1DC1E-4BCE-4304-A358-395190C9BBC4</string>
+	<string>57EDFA6C-A9EA-47A1-BAE2-86AE5D00884C</string>
 	<key>IDECodeSnippetLanguage</key>
-	<string>Xcode.SourceCodeLanguage.C</string>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetSummary</key>
-	<string>Quick for loop that works for 90% of all cases.</string>
+	<string>A singleton stub class in Swift.</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>For Complete</string>
+	<string>Swift - Singleton</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
