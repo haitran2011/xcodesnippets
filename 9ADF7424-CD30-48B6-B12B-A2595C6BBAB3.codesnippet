@@ -10,7 +10,7 @@
 	</array>
 	<key>IDECodeSnippetContents</key>
 	<string>protocol MyViewModelDelegate: class {
-    func myFunc()
+    func doSomething()
 }
 
 class MyViewModel {
@@ -52,17 +52,14 @@ class MyViewModel {
     // Funcs - Public - External
     // =========================================================================
     
-    func facebookLogin() {
-        dataController?.facebookAuth()
+    func doStuff() {
+//        dataController?.doStuff
     }
     
-    func googleLogin() {
-        dataController?.googleLogin()
-    }
 }
 
 extension MyViewModel: MyDataControllerDelegate {
-    func myFunc{}
+    func doSomething() { }
 }</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>9ADF7424-CD30-48B6-B12B-A2595C6BBAB3</string>

@@ -9,7 +9,8 @@
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>        addSubviewNoAuto(myView)
+	<string>        myView.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(myView)
         NSLayoutConstraint.activateConstraints([
             myView.topAnchor.constraintEqualToAnchor(myView.superview?.topAnchor),
             myView.bottomAnchor.constraintEqualToAnchor(myView.superview?.bottomAnchor),
