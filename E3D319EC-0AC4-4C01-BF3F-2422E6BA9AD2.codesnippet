@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>swift-collectionview-lazy</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>ClassImplementation</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>    private lazy var flowLayout: UICollectionViewFlowLayout = {
+        let layout = UICollectionViewFlowLayout()
+        layout.sectionHeadersPinToVisibleBounds = true
+        return layout
+    }()
+    
+    private lazy var collectionView: UICollectionView = {
+        let view = UICollectionView(frame: CGRectZero, collectionViewLayout: self.flowLayout)
+        view.registerClass(MyHeaderView.self, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: String(MyHeaderView))
+        view.registerClass(MyCell.self, forCellWithReuseIdentifier: String(MyCell))
+        view.keyboardDismissMode = .Interactive
+        view.allowsSelection = true
+        view.keyboardDismissMode = .None
+        view.backgroundColor = UIColor.boundLightGray()
+        view.showsVerticalScrollIndicator = false
+        view.alwaysBounceVertical = true
+        view.dataSource = self
+        view.delegate = self
+        view.addSubview(self.refreshControl)
+        return view
+    }()</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>E3D319EC-0AC4-4C01-BF3F-2422E6BA9AD2</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>Lazy UICollectionView with flow layout.</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Swift - UICollectionView - lazy</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

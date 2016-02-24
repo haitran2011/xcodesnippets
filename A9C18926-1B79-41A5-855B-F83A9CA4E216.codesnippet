@@ -2,55 +2,85 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>swift-collectionviewcell</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>TopLevel</string>
+		<string>ClassImplementation</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>import UIKit
+	<string>protocol MyCellDelegate: class { }
 
-class LoginRegisterViewController: UIViewController {
-
+class MyCell: UICollectionViewCell {
+    
     // =========================================================================
     // Enums/Structs
     // =========================================================================
     
-    // =========================================================================
-    // IBOutlets - Refs/Funcs
-    // =========================================================================
+    private struct Const { }
     
     // =========================================================================
     // Vars
+    // =========================================================================
+    
+    weak var delegate: MyCellDelegate?
+    private var layoutCompleted = false
+    
+    // =========================================================================
+    // Vars - Views
     // =========================================================================
     
     // =========================================================================
     // Funcs - Overridden
     // =========================================================================
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        view.backgroundColor = UIColor.redColor()
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        setup()
+        layout()
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        setup()
+        layout()
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+    }
+    
+    override class func requiresConstraintBasedLayout() -&gt; Bool {
+        return true
+    }
+    
+    override func updateConstraints() {
+        defer { super.updateConstraints() }
+        guard layoutCompleted == false else { return }
+        layoutCompleted = true
     }
     
     // =========================================================================
     // Funcs - Private
     // =========================================================================
     
+    private func setup() { }
+    
+    private func layout() { }
+    
     // =========================================================================
     // Funcs - Public
     // =========================================================================
-
+    
 }</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>E4D06DFF-275D-41E8-9E10-11D6F42E9FBE</string>
+	<string>A9C18926-1B79-41A5-855B-F83A9CA4E216</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>Basic stub for a UICollectionViewCell.</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>My Code Snippet</string>
+	<string>Swift - UICollectionViewCell stub</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

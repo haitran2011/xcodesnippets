@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>swift-labelattributedtitle</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>ClassImplementation</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>    private lazy var bodyAttributes: [String : AnyObject] = {
+        return [
+            NSFontAttributeName : UIFont(name: FontNames.AvenirBook, size: 13.0) ?? UIFont.systemFontOfSize(13.0),
+            NSForegroundColorAttributeName : UIColor.whiteColor(),
+            NSKernAttributeName : CGFloat(0.5)
+        ]
+    }()
+    
+    override var text: String! {
+        get {
+            return super.text
+        } set (text) {
+            attributedText = NSMutableAttributedString(string: text, attributes: bodyAttributes)
+        }
+    }</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>FB04F247-F216-4DF6-9592-93A3B2D6F9B1</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Swift - UILabel attributed title</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
