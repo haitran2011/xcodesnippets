@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>swift-datacontrollerrequest-documentation</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>ClassImplementation</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>    /**
+     Requests all &lt;#objects#&gt; for a particular &lt;#object#&gt;.
+     
+     Updates the `&lt;#object#&gt;`, Data Models var.
+     
+     - parameter handler: A simple result that indicates success or returns a failure error.
+     - returns: If a network request is made, the optional `Request` that may be cancelled at any time. If a network request is not made `nil` is returned. If the var `&lt;#var#&gt;` is not set `nil` is returned.
+     */</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>B6802A20-9931-4C3D-9132-E7D40F10895D</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>Standard documentation stub for a Data Controller request function.</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Swift - Data Controller - request function documentation</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

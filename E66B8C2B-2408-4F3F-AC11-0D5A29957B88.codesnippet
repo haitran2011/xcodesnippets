@@ -17,6 +17,8 @@
         label.lineBreakMode = .ByWordWrapping
         label.numberOfLines = 0
         label.textAlignment = .Left
+        label.setContentCompressionResistancePriority(UILayoutPriorityRequired, forAxis: .Horizontal)
+        label.setContentHuggingPriority(UILayoutPriorityRequired, forAxis: .Horizontal)
         return label
     }()</string>
 	<key>IDECodeSnippetIdentifier</key>

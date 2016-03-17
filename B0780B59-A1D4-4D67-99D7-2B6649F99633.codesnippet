@@ -9,35 +9,34 @@
 		<string>TopLevel</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>import UIKit
-
-class &lt;#MyViewController#&gt;: UIViewController {
+	<string>class MyViewController: ViewController {
     
     // =========================================================================
     // Enums/Structs
     // =========================================================================
     
-    private struct Const {
-        static let Const = "Const"
-    }
-    
-    // =========================================================================
-    // IBOutlets - Refs/Funcs
-    // =========================================================================
+    private struct Const { }
     
     // =========================================================================
     // Vars
     // =========================================================================
     
     // =========================================================================
+    // Vars - Views
+    // =========================================================================
+    
+    // =========================================================================
     // Funcs - Overridden
     // =========================================================================
     
-    convenience init(&lt;#type#&gt;: &lt;#Type#&gt;) {
-        self.init()
+    required init(persist: PersistentDataController?, root: RootViewControllerDelgate?) {
+        super.init(persist: persist, root: root)
         setup()
-        setup(type)
         layout()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
     }
     
     override func viewDidLoad() {
@@ -70,21 +69,13 @@ class &lt;#MyViewController#&gt;: UIViewController {
     // Funcs - Private
     // =========================================================================
     
-    private func setup() {
-        // internal setup
-    }
+    private func setup() { }
     
-    private func layout() {
-        // layout stuff
-    }
+    private func layout() { }
     
     // =========================================================================
     // Funcs - Public
     // =========================================================================
-    
-    func setup(&lt;#type#&gt;: &lt;#Type#&gt;) {
-        // setup after alloc/init
-    }
     
 }</string>
 	<key>IDECodeSnippetIdentifier</key>

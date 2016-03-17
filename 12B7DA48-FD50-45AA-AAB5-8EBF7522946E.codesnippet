@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>swift-constraints-huggingparentconstant</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>        myView.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(myView)
+        NSLayoutConstraint.activateConstraints([
+            myView.topAnchor.constraintEqualToAnchor(topAnchor, constant: 0),
+            myView.bottomAnchor.constraintEqualToAnchor(bottomAnchor, constant: 0),
+            myView.leftAnchor.constraintEqualToAnchor(leftAnchor, constant: 0),
+            myView.rightAnchor.constraintEqualToAnchor(rightAnchor, constant: 0)
+            ])</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>12B7DA48-FD50-45AA-AAB5-8EBF7522946E</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>TBLR constraints with a constant (initialized to 0).</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Swift - Constraints - hugging parent constant</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

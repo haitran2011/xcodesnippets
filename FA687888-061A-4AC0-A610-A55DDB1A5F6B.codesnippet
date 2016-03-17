@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>swift-constraintshugging-stackview</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>CodeBlock</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>        myView.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(myView)
+        
+        let constraints: [NSLayoutConstraint] = [
+            myView.topAnchor.constraintEqualToAnchor(myView.superview?.topAnchor),
+            myView.bottomAnchor.constraintEqualToAnchor(myView.superview?.bottomAnchor),
+            myView.leftAnchor.constraintEqualToAnchor(myView.superview?.leftAnchor),
+            myView.rightAnchor.constraintEqualToAnchor(myView.superview?.rightAnchor)
+        ]
+        
+        constraints[0].priority = UILayoutPriorityDefaultHigh
+        constraints[1].priority = UILayoutPriorityDefaultHigh
+        
+        NSLayoutConstraint.activateConstraints(constraints)</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>FA687888-061A-4AC0-A610-A55DDB1A5F6B</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>Constraints are declared before being activated so that a lower priority may be set to accomodate UIStackView animations etc.</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Swift - hugging constraints for UIStackView</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
