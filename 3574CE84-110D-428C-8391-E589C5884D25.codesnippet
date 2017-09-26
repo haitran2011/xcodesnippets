@@ -3,24 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>swift-affinetransformidentity</string>
+	<string>c-singlelinesectiondivider</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>CodeBlock</string>
+		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>var transform = CGAffineTransform.identity
-transform = transform.translatedBy(x: 0, y: 0)
-transform = transform.rotated(by: 0)
-transform = transform.scaledBy(x: 1, y: 1)</string>
+	<string>/* &lt;#Text#&gt; -------------------------------------------------------------------- */</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>D51D981F-68C9-43FF-9F8E-66FF924A6841</string>
+	<string>3574CE84-110D-428C-8391-E589C5884D25</string>
 	<key>IDECodeSnippetLanguage</key>
-	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<string>Xcode.SourceCodeLanguage.C</string>
 	<key>IDECodeSnippetSummary</key>
-	<string>CGAffineTransform starter.</string>
+	<string>Single line section divider with title.</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>Swift - CGAffineTransform</string>
+	<string>C Single Line Section Divider</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

@@ -3,24 +3,24 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>swift-affinetransformidentity</string>
+	<string>swift-spacer</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>CodeBlock</string>
+		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>var transform = CGAffineTransform.identity
-transform = transform.translatedBy(x: 0, y: 0)
-transform = transform.rotated(by: 0)
-transform = transform.scaledBy(x: 1, y: 1)</string>
+	<string>fileprivate class SpacerView: UIView {
+    
+    override open var intrinsicContentSize : CGSize {
+        return CGSize(width: super.intrinsicContentSize.width, height: super.intrinsicContentSize.height)
+    }
+}</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>D51D981F-68C9-43FF-9F8E-66FF924A6841</string>
+	<string>0F1FFB98-3AAB-4808-B8DB-B0807412BC0D</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
-	<key>IDECodeSnippetSummary</key>
-	<string>CGAffineTransform starter.</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>Swift - CGAffineTransform</string>
+	<string>Swift - Intrinsic Spacer</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

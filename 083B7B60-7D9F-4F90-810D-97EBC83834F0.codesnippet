@@ -9,22 +9,23 @@
 		<string>ClassImplementation</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>    private lazy var button: UIButton = {
-        let button = UIButton()
-        button.backgroundColor = UIColor.whiteColor()
-        button.setTitle(NSLocalizedString("Title", comment: ""), forState: .Normal)
-        button.setTitleColor(UIColor.blackColor(), forState: .Normal)
-        button.setTitleColor(UIColor.blackColor(), forState: .Highlighted)
-        button.titleLabel?.font = UIFont(name: FontNames.HelveticaNeue, size: 12)
-        button.setImage(UIImage(named: ""), forState: .Normal)
-        button.imageEdgeInsets = UIEdgeInsets(top: 0, left: -5, bottom: 0, right: 5)
-        button.titleEdgeInsets = UIEdgeInsets(top: 0, left: 5, bottom: 0, right: -5)
-        button.contentEdgeInsets = UIEdgeInsets(top: 0, left: 5, bottom: 0, right: 5)
-        button.addTarget(self, action: "buttonAction:", forControlEvents: .TouchUpInside)
-        button.setContentCompressionResistancePriority(UILayoutPriorityRequired, forAxis: .Horizontal)
-        button.setContentHuggingPriority(UILayoutPriorityRequired, forAxis: .Horizontal)
-        return button
-    }()</string>
+	<string>private lazy var button: UIButton = {
+    let button = UIButton()
+    button.backgroundColor = .white
+    button.setTitle(NSLocalizedString("Title", comment: ""), for: .normal)
+    button.setTitleColor(.black, for: .normal)
+    button.setTitleColor(.black, for: .highlighted)
+    button.titleLabel?.font = UIFont(name: Fonts.HelveticaNeue, size: 12)
+    button.setImage(UIImage(named: ""), for: .normal)
+    button.imageEdgeInsets = UIEdgeInsets(top: 0, left: -5, bottom: 0, right: 5)
+    button.titleEdgeInsets = UIEdgeInsets(top: 0, left: 5, bottom: 0, right: -5)
+    button.contentEdgeInsets = UIEdgeInsets(top: 0, left: 5, bottom: 0, right: 5)
+    button.addTarget(self, action: #selector(buttonAction(button:)), for: .touchUpInside)
+    button.setContentCompressionResistancePriority(UILayoutPriorityRequired, for: .horizontal)
+    button.setContentHuggingPriority(UILayoutPriorityRequired, for: .horizontal)
+    return button
+}()
+</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>083B7B60-7D9F-4F90-810D-97EBC83834F0</string>
 	<key>IDECodeSnippetLanguage</key>

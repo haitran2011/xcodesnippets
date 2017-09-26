@@ -11,73 +11,52 @@
 	<key>IDECodeSnippetContents</key>
 	<string>class MyViewController: ViewController {
     
-    // =========================================================================
-    // Enums/Structs
-    // =========================================================================
+    // Mark - Enums/Structs
     
     private struct Const { }
     
-    // =========================================================================
-    // Vars
-    // =========================================================================
+    // Mark - Vars
     
-    // =========================================================================
-    // Vars - Views
-    // =========================================================================
+    // Mark - Vars - Views
     
-    // =========================================================================
-    // Funcs - Overridden
-    // =========================================================================
-    
-    required init(persist: PersistentDataController?, root: RootViewControllerDelgate?) {
-        super.init(persist: persist, root: root)
-        setup()
-        layout()
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-    }
+    // Mark - Funcs - Overridden
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // MARK: viewDidLoad - Setup
+        
+        // MARK: viewDidLoad - Layout
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
     }
     
-    override func viewWillDisappear(animated: Bool) {
+    override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
     }
     
-    override func viewDidDisappear(animated: Bool) {
+    override func viewDidDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
     }
     
     deinit { }
     
-    // =========================================================================
-    // Funcs - Private
-    // =========================================================================
+    // Mark - Funcs - Private
     
-    private func setup() { }
+    // Mark - Funcs - Public
     
-    private func layout() { }
-    
-    // =========================================================================
-    // Funcs - Public
-    // =========================================================================
-    
-}</string>
+}
+</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>B0780B59-A1D4-4D67-99D7-2B6649F99633</string>
 	<key>IDECodeSnippetLanguage</key>

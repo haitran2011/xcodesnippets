@@ -9,10 +9,11 @@
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>        myView.setContentHuggingPriority(UILayoutPriorityRequired, forAxis: .Horizontal)
-        myView.setContentHuggingPriority(UILayoutPriorityRequired, forAxis: .Vertical)
-        myView.setContentCompressionResistancePriority(UILayoutPriorityRequired, forAxis: .Horizontal)
-        myView.setContentCompressionResistancePriority(UILayoutPriorityRequired, forAxis: .Vertical)</string>
+	<string>view.setContentHuggingPriority(UILayoutPriorityRequired, for: .horizontal)
+view.setContentHuggingPriority(UILayoutPriorityRequired, for: .vertical)
+view.setContentCompressionResistancePriority(UILayoutPriorityRequired, for: .horizontal)
+view.setContentCompressionResistancePriority(UILayoutPriorityRequired, for: .vertical)
+</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>968314DE-547B-4C62-A6BE-FBBFEF45A63A</string>
 	<key>IDECodeSnippetLanguage</key>

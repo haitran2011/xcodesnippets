@@ -9,18 +9,20 @@
 		<string>ClassImplementation</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>    private lazy var label: UILabel = {
-        let label = UILabel()
-        label.font = UIFont(name: FontNames.HelveticaNeue, size: 12)
-        label.textColor = UIColor.whiteColor()
-        label.text = NSLocalizedString("Label", comment: "")
-        label.lineBreakMode = .ByWordWrapping
-        label.numberOfLines = 0
-        label.textAlignment = .Left
-        label.setContentCompressionResistancePriority(UILayoutPriorityRequired, forAxis: .Horizontal)
-        label.setContentHuggingPriority(UILayoutPriorityRequired, forAxis: .Horizontal)
-        return label
-    }()</string>
+	<string>private lazy var label: UILabel = {
+    let label = UILabel()
+    label.font = UIFont(name: Fonts.SFUIDisplayMedium, size: 10)
+    label.textColor = .black
+    label.text = NSLocalizedString("Label", comment: "")
+    label.lineBreakMode = .byWordWrapping
+    label.numberOfLines = 0
+    label.textAlignment = .left
+    label.setContentCompressionResistancePriority(UILayoutPriorityRequired, for: .horizontal)
+    label.setContentHuggingPriority(UILayoutPriorityRequired, for: .horizontal)
+    return label
+}()
+
+</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>E66B8C2B-2408-4F3F-AC11-0D5A29957B88</string>
 	<key>IDECodeSnippetLanguage</key>

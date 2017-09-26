@@ -9,17 +9,18 @@
 		<string>ClassImplementation</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>    private lazy var stackView: UIStackView = {
-        let stack = UIStackView(arrangedSubviews: [])
-        stack.axis = .Vertical
-        stack.distribution = .Fill
-        stack.alignment = .Fill
-        stack.spacing = 0
-        stack.layoutMargins = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
-        stack.layoutMarginsRelativeArrangement = true
-        stack.setContentHuggingPriority(UILayoutPriorityDefaultHigh, forAxis: .Horizontal)
-        return stack
-    }()</string>
+	<string>private lazy var stackView: UIStackView = {
+    let stack = UIStackView(arrangedSubviews: [])
+    stack.axis = .vertical
+    stack.distribution = .fill
+    stack.alignment = .fill
+    stack.spacing = 0
+    stack.layoutMargins = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+    stack.isLayoutMarginsRelativeArrangement = true
+    stack.setContentHuggingPriority(UILayoutPriorityDefaultHigh, for: .horizontal)
+    return stack
+}()
+</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>3659CD6B-4CE3-473B-857C-9AC8EF8C901B</string>
 	<key>IDECodeSnippetLanguage</key>

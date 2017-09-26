@@ -11,7 +11,7 @@
 	<key>IDECodeSnippetContents</key>
 	<string>    private lazy var image: UIImageView = {
         let view = UIImageView()
-        view.contentMode = .ScaleAspectFill
+        view.contentMode = .scaleAspectFill
         view.image = UIImage(named: "")
         return view
     }()</string>

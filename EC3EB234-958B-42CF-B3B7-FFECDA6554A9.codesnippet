@@ -9,59 +9,44 @@
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>class &lt;#MyView#&gt;: UIView {
+	<string>import UIKit
+
+class MyView: UIView {
     
-    // =========================================================================
-    // Enums/Structs
-    // =========================================================================
+    // Mark - Enums/Structs
     
     private struct Const {
         static let ConstValue = "Const"
     }
     
-    // =========================================================================
-    // IBOutlets - Refs/Funcs
-    // =========================================================================
+    // Mark - IBOutlets - Refs/Funcs
     
-    // =========================================================================
-    // Vars
-    // =========================================================================
+    // Mark - Vars
     
-    // =========================================================================
-    // Funcs - Overridden
-    // =========================================================================
+    // Mark - Funcs - Overridden
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        setup()
-        layout()
+        
+        // MARK: init - Setup
+        
+        // MARK: init - Layout
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        setup()
-        layout()
     }
     
     override func layoutSubviews() {
         super.layoutSubviews()
     }
     
-    // =========================================================================
-    // Funcs - Private
-    // =========================================================================
+    // Mark - Funcs - Private
     
-    private func setup() {
-    }
+    // Mark - Funcs - Public
     
-    private func layout() {
-    }
-    
-    // =========================================================================
-    // Funcs - Public
-    // =========================================================================
-    
-}</string>
+}
+</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>EC3EB234-958B-42CF-B3B7-FFECDA6554A9</string>
 	<key>IDECodeSnippetLanguage</key>

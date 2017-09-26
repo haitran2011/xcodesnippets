@@ -9,47 +9,38 @@
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>protocol MyCellDelegate: class { }
+	<string>import UIKit
+
+protocol MyCellDelegate: class { }
 
 class MyCell: UITableViewCell {
-    
-    // =========================================================================
-    // Enums/Structs
-    // =========================================================================
+
+    // Mark - Enums/Structs
     
     private struct Const { }
     
-    // =========================================================================
-    // Vars
-    // =========================================================================
+    // Mark - Vars
     
     weak var delegate: MyCellDelegate?
     private var layoutCompleted = false
     
-    // =========================================================================
-    // Vars - Views
-    // =========================================================================
+    // Mark - Vars - Views
     
-    // =========================================================================
-    // Funcs - Overridden
-    // =========================================================================
+    // Mark - Funcs - Overridden
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        setup()
-        layout()
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        setup()
-        layout()
+        
+        // Mark init - Setup
+        // Mark init - Layout
     }
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        setup()
-        layout()
     }
     
     override func layoutSubviews() {
@@ -62,22 +53,15 @@ class MyCell: UITableViewCell {
         layoutCompleted = true
     }
     
-    override func setSelected(selected: Bool, animated: Bool) {
+    override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
     
-    // =========================================================================
-    // Funcs - Private
-    // =========================================================================
+    // Mark - Funcs - Private
     
-    private func setup() { }
-    
-    private func layout() { }
-    
-    // =========================================================================
-    // Funcs - Public
-    // =========================================================================
-}</string>
+    // Mark - Funcs - Public
+}
+</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>0E9013EE-4DD0-4C8C-BB39-69482B124E9F</string>
 	<key>IDECodeSnippetLanguage</key>

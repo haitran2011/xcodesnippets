@@ -9,14 +9,15 @@
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>        myView.translatesAutoresizingMaskIntoConstraints = false
-        addSubview(myView)
-        NSLayoutConstraint.activateConstraints([
-            myView.topAnchor.constraintEqualToAnchor(myView.superview?.topAnchor),
-            myView.bottomAnchor.constraintEqualToAnchor(myView.superview?.bottomAnchor),
-            myView.leftAnchor.constraintEqualToAnchor(myView.superview?.leftAnchor),
-            myView.rightAnchor.constraintEqualToAnchor(myView.superview?.rightAnchor)
-            ])</string>
+	<string>mySubview.translatesAutoresizingMaskIntoConstraints = false
+view.addSubview(mySubview)
+NSLayoutConstraint.activate([
+    mySubview.topAnchor.constraint(equalTo: view.topAnchor),
+    mySubview.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+    mySubview.leftAnchor.constraint(equalTo: view.leftAnchor),
+    mySubview.rightAnchor.constraint(equalTo: view.rightAnchor)
+    ])
+</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>DF2AEB8F-B9AE-4150-AB57-AF1491636FC6</string>
 	<key>IDECodeSnippetLanguage</key>
