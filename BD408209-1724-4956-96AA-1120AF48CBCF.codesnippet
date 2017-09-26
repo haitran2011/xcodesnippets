@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>swcc</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>import UIKit
+
+protocol MyCellDelegate: class { }
+
+class MyCell: UICollectionViewCell {
+    
+    // Mark - Enums/Structs
+    
+    private struct Const { }
+    
+    // Mark - Vars
+    
+    weak var delegate: MyCellDelegate?
+    private var layoutCompleted = false
+    
+    // Mark - Vars - Views
+    
+    // Mark - Funcs - Overridden
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        
+        // Mark init - Setup
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+    }
+    
+    override class var requiresConstraintBasedLayout : Bool {
+        return true
+    }
+    
+    override func updateConstraints() {
+        defer { super.updateConstraints() }
+        guard layoutCompleted == false else { return }
+        
+        // Mark init - Layout
+        
+        layoutCompleted = true
+    }
+    
+    // Mark - Funcs - Private
+    
+    // Mark - Funcs - Public
+    
+}
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>BD408209-1724-4956-96AA-1120AF48CBCF</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>swift - UICollectionViewCell</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

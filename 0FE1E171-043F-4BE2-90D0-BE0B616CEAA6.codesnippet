@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>swtc</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>import UIKit
+
+protocol MyCellDelegate: class { }
+
+class MyCell: UITableViewCell {
+    
+    // Mark - Enums/Structs
+    
+    private struct Const { }
+    
+    // Mark - Vars
+    
+    weak var delegate: MyCellDelegate?
+    private var layoutCompleted = false
+    
+    // Mark - Vars - Views
+    
+    // Mark - Funcs - Overridden
+    
+    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
+        
+        // Mark init - Setup
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+    }
+    
+    override func updateConstraints() {
+        defer { super.updateConstraints() }
+        guard layoutCompleted == false else { return }
+        
+        // Mark init - Layout
+        
+        layoutCompleted = true
+    }
+    
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+    }
+    
+    // Mark - Funcs - Private
+    
+    // Mark - Funcs - Public
+}
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>0FE1E171-043F-4BE2-90D0-BE0B616CEAA6</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>swift - UITableViewCell</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

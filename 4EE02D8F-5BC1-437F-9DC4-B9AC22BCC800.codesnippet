@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>swvc</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>import UIKit
+
+class MyViewController: ViewController {
+    
+    // Mark - Enums/Structs
+    
+    private struct Const { }
+    
+    // Mark - Vars
+    
+    // Mark - Vars - Views
+    
+    // Mark - Funcs - Overridden
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        // MARK: viewDidLoad - Setup
+        
+        // MARK: viewDidLoad - Layout
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+    }
+    
+    deinit { }
+    
+    // Mark - Funcs - Private
+    
+    // Mark - Funcs - Public
+    
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>4EE02D8F-5BC1-437F-9DC4-B9AC22BCC800</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>swift - ViewController</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

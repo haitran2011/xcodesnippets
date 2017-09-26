@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>swcct</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>print("backgroundContext.performBlock Thread.isMainThread: \(Thread.isMainThread)")
+print("backgroundContext.performBlock Thread.current: \(Thread.current)")
+print("Request 1 completion Thread.isMainThread: \(Thread.isMainThread)")
+print("Request 1 completion Thread.current: \(Thread.current)")
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>69FD55F2-1634-4017-A310-418C94A74CDC</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>swift - Get Core Data Current Thread Info</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

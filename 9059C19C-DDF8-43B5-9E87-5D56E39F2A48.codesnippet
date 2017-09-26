@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>swiv</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>private lazy var image: UIImageView = {
+    let view = UIImageView()
+    view.contentMode = .scaleAspectFill
+    view.image = UIImage(named: "")
+    
+    let capEdgeInsets = UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
+    let image = UIImage(named: "image")?.withRenderingMode(.alwaysTemplate).resizableImage(withCapInsets: capEdgeInsets, resizingMode: .stretch)
+    view.image = image
+    view.backgroundColor = .white
+    view.tintColor = .red
+    view.isUserInteractionEnabled = true
+    
+    return view
+}()
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>9059C19C-DDF8-43B5-9E87-5D56E39F2A48</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>swift - UIImageView lazy</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

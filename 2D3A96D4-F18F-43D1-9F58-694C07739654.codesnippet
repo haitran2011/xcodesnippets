@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>swtvc</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>import UIKit
+
+class MyTableViewController: ViewController {
+    
+    // Mark - Enums/Structs
+    
+    private struct Const { }
+    
+    // Mark - Vars
+    
+    // Mark - Vars - Views
+    
+    fileprivate lazy var tableView: UITableView = {
+        let view = UITableView(frame: CGRect.zero, style: .plain)
+        view.register(CellA.self, forCellReuseIdentifier: String(describing: CellA.self))
+        view.register(CellB.self, forCellReuseIdentifier: String(describing: CellB.self))
+        view.allowsSelection = false
+        view.keyboardDismissMode = .none
+        view.rowHeight = UITableViewAutomaticDimension
+        view.estimatedRowHeight = 80
+        view.backgroundColor = .white
+        view.separatorColor = .gray
+        view.showsVerticalScrollIndicator = false
+        view.dataSource = self
+        view.delegate = self
+        view.tableFooterView = UIView()
+        view.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        return view
+    }()
+    
+    // Mark - Funcs - Overridden
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        // MARK: viewDidLoad - Setup
+        
+        // MARK: viewDidLoad - Layout
+        
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(tableView)
+        NSLayoutConstraint.activate([
+            tableView.topAnchor.constraint(equalTo: view.topAnchor),
+            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            tableView.leftAnchor.constraint(equalTo: view.leftAnchor),
+            tableView.rightAnchor.constraint(equalTo: view.rightAnchor)
+            ])
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+    }
+    
+    deinit { }
+    
+    // Mark - Funcs - Private
+    
+    // Mark - Funcs - Public
+}
+
+/**
+ Sections:
+ 0. Cell
+ 1. Cell
+ 2. Cell
+ */
+extension MyTableViewController: UITableViewDataSource, UITableViewDelegate {
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) { }
+    
+    // Mark UITableViewDataSource
+    
+    func numberOfSections(in tableView: UITableView) -&gt; Int {
+        return 3
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -&gt; Int {
+        print(artistsDataController?.artists?.count ?? 0)
+        switch section {
+        case 0: return 1
+        case 1: return 1
+        case 2: return 1
+        default:
+            assertionFailure()
+            return 0
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        switch indexPath.section {
+        case 0:
+            cell.separatorInset = UIEdgeInsetsMake(0, cell.bounds.width/2.0, 0, cell.bounds.width/2.0)
+        case 1:
+            cell.separatorInset = UIEdgeInsetsMake(0, cell.bounds.width/2.0, 0, cell.bounds.width/2.0)
+        case 2:
+            cell.separatorInset.left = 80
+        default:
+            return
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -&gt; UITableViewCell {
+        
+        switch indexPath.section {
+        case 0:
+            guard
+                let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: CellA.self), for: indexPath) as? CellA
+                else { return UITableViewCell() }
+            cell.setNeedsUpdateConstraints()
+            cell.updateConstraintsIfNeeded()
+            return cell
+            
+        default:
+            assertionFailure()
+            return UITableViewCell()
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -&gt; Bool {
+        switch indexPath.section {
+        case 0: return false
+        case 1: return false
+        case 2: return false
+        default:
+            assertionFailure()
+            return false
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        assertionFailure()
+    }
+    
+    // Mark UITableViewDelegate
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        switch indexPath.section {
+            
+        case 0:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: CellA.self), for: indexPath) as? CellA else { return }
+            
+        default:
+            assertionFailure()
+        }
+    }
+    
+}
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>2D3A96D4-F18F-43D1-9F58-694C07739654</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>swift - Table ViewController</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

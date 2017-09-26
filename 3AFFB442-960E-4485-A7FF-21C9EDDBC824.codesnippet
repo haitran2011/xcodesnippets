@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>swcvc</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>import UIKit
+
+class MyCollectionViewController: ViewController {
+    
+    // Mark - Enums/Structs
+    
+    fileprivate struct Const {
+        static let Margin = CGFloat(20)
+    }
+    
+    // Mark - Vars
+    
+    // Mark - Vars - Views
+    
+    fileprivate lazy var flowLayout: UICollectionViewFlowLayout = {
+        let layout = UICollectionViewFlowLayout()
+        return layout
+    }()
+    
+    fileprivate lazy var collectionView: UICollectionView = {
+        let view = UICollectionView(frame: CGRect.zero, collectionViewLayout: self.flowLayout)
+        view.register(CellA.self, forCellWithReuseIdentifier: String(describing: CellA.self))
+        view.register(CellB.self, forCellWithReuseIdentifier: String(describing: CellB.self))
+        view.keyboardDismissMode = .interactive
+        view.allowsSelection = true
+        view.keyboardDismissMode = .none
+        view.backgroundColor = .white
+        view.showsVerticalScrollIndicator = false
+        view.alwaysBounceVertical = true
+        view.dataSource = self
+        view.delegate = self
+        
+        view.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        
+        return view
+    }()
+    
+    
+    // Mark - Funcs - Overridden
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        // MARK: viewDidLoad - Setup
+        
+        // MARK: viewDidLoad - Layout
+        
+        collectionView.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(collectionView)
+        NSLayoutConstraint.activate([
+            collectionView.topAnchor.constraint(equalTo: view.topAnchor),
+            collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            collectionView.leftAnchor.constraint(equalTo: view.leftAnchor),
+            collectionView.rightAnchor.constraint(equalTo: view.rightAnchor)
+            ])
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+    }
+    
+    deinit { }
+    
+    // Mark - Funcs - Private
+    
+    // Mark - Funcs - Public
+}
+
+/**
+ Sections:
+ 0. CellA
+ 1. CellB
+ */
+extension MyCollectionViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+    
+    // Mark UICollectionViewDelegate
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        switch indexPath.section {
+        case 0:
+            break
+        case 1:
+            break
+        default:
+            assertionFailure()
+        }
+    }
+    
+    // Mark UICollectionViewDataSource
+    
+    func numberOfSections(in collectionView: UICollectionView) -&gt; Int {
+        return 2
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -&gt; Int {
+        switch section {
+        case 0: return 1
+        case 1: return 1
+        default:
+            assertionFailure()
+            return 0
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -&gt; UICollectionViewCell {
+        
+        switch indexPath.section {
+        case 0:
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: CellA.self), for: indexPath) as? CellA else { return UICollectionViewCell() }
+            cell.setNeedsUpdateConstraints()
+            cell.updateConstraintsIfNeeded()
+            return cell
+            
+        case 1:
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: CellB.self), for: indexPath) as? CellB else { return UICollectionViewCell() }
+            cell.setNeedsUpdateConstraints()
+            cell.updateConstraintsIfNeeded()
+            return cell
+            
+        default:
+            assertionFailure()
+            return UICollectionViewCell()
+        }
+    }
+    
+    // Mark UICollectionViewDelegateFlowLayout
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -&gt; CGSize {
+        
+        let width = collectionView.frame.width
+        
+        switch indexPath.section {
+        case 0: return CGSize(width: width, height: 80)
+        case 1: return CGSize(width: width, height: 80)
+        default:
+            assertionFailure()
+            return CGSize.zero
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -&gt; UIEdgeInsets {
+        switch section {
+        case 0: return UIEdgeInsets.zero
+        case 1: return UIEdgeInsets(top: Const.Margin, left: Const.Margin, bottom: Const.Margin, right: Const.Margin)
+        default:
+            assertionFailure()
+            return UIEdgeInsets.zero
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -&gt; CGFloat {
+        return Const.Margin
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -&gt; CGFloat {
+        return Const.Margin
+    }
+}
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>3AFFB442-960E-4485-A7FF-21C9EDDBC824</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>swift - Collection ViewController</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

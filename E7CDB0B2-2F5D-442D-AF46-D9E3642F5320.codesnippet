@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>swjs</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>do{
+    let json = try JSONSerialization.jsonObject(with: data, options: [])
+    if let messagesArray = json as? [Any] {
+        for messageJSON in messagesArray {
+            if
+                let messageDict = messageJSON as? [String: Any],
+                let title = messageDict["title"] as? String,
+                let body = messageDict["body"] as? String
+            {
+                print("title: \(title)\nbody: \(body)\n")
+            }
+        }
+    }
+} catch {
+    assertionFailure()
+    print("Error: \(error.localizedDescription)")
+}
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>E7CDB0B2-2F5D-442D-AF46-D9E3642F5320</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>swift - Simple JSON creation/parsing</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>swrq</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>if let url = URL(string: "https://jsonplaceholder.typicode.com/posts")
+{
+    let task = URLSession.shared.dataTask(with: url) { data, response, error in
+        if let error = error {
+            print("Error: \(error.localizedDescription)")
+        } else if let data = data {
+            let dataString = String(data: data, encoding: String.Encoding.utf8)
+            print("dataString: \(dataString)")
+        } else {
+            assertionFailure()
+            print("Error: \(error.localizedDescription)")
+        }
+    }
+    task.resume()
+}
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>D89065DC-7128-4F72-9628-60D34DE3AF3A</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>swift - Simple network request</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

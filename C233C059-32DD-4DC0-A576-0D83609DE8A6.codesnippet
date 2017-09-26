@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>swbt</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>private lazy var button: UIButton = {
+    let button = UIButton()
+    button.backgroundColor = .clear
+    button.contentEdgeInsets = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
+    let capEdgeInsets = UIEdgeInsets(top: 0, left: 70, bottom: 0, right: 70)
+    let image = UIImage(named: "button")?.withRenderingMode(.alwaysTemplate).resizableImage(withCapInsets: capEdgeInsets, resizingMode: .stretch)
+    button.setBackgroundImage(image, for: .normal)
+    button.setBackgroundImage(image, for: .highlighted)
+    button.setBackgroundImage(image, for: .selected)
+    button.tintColor = .red
+    
+    button.setTitleColor(.white, for: .normal)
+    button.setTitleColor(.white, for: .highlighted)
+    button.titleLabel?.font = UIFont.systemFont(ofSize: 20, weight: UIFontWeightMedium)
+    button.setTitle(NSLocalizedString("button", comment: ""), for: .normal)
+    
+    button.setContentCompressionResistancePriority(UILayoutPriorityRequired, for: .horizontal)
+    button.setContentHuggingPriority(UILayoutPriorityRequired, for: .horizontal)
+    
+    button.addTarget(self, action: #selector(buttonAction(button:)), for: .touchUpInside)
+    
+    return button
+}()
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>C233C059-32DD-4DC0-A576-0D83609DE8A6</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>swift - UIButton lazy</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

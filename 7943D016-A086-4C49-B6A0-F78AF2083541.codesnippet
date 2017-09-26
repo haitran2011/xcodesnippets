@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>swrqjs</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>if let url = URL(string: "https://jsonplaceholder.typicode.com/posts")
+{
+    let task = URLSession.shared.dataTask(with: url) { data, response, error in
+        if let error = error {
+            print("Error: \(error.localizedDescription)")
+        } else if let data = data {
+            // let dataString = String(data: data, encoding: String.Encoding.utf8)
+            do{
+                let json = try JSONSerialization.jsonObject(with: data, options: [])
+                if let messagesArray = json as? [Any] {
+                    for messageJSON in messagesArray {
+                        if
+                            let messageDict = messageJSON as? [String: Any],
+                            let title = messageDict["title"] as? String,
+                            let body = messageDict["body"] as? String
+                        {
+                            print("title: \(title)\nbody: \(body)\n")
+                        }
+                    }
+                }
+            } catch {
+                assertionFailure()
+                print("Error: \(error.localizedDescription)")
+            }
+        } else {
+            print("Error: No data returned")
+        }
+    }
+    task.resume()
+}
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>7943D016-A086-4C49-B6A0-F78AF2083541</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>swift - Simple network request with JSON handling</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

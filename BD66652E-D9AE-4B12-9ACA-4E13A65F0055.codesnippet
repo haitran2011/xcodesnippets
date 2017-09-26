@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>swsc</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>private lazy var scrollView: UIScrollView = {
+    let view = UIScrollView()
+    view.showsVerticalScrollIndicator = false
+    
+    mySubview.translatesAutoresizingMaskIntoConstraints = false
+    view.addSubview(mySubview)
+    
+    let constriants: [NSLayoutConstraints] = [
+        mySubview.topAnchor.constraint(equalTo: view.topAnchor),
+        mySubview.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+        mySubview.leftAnchor.constraint(equalTo: view.leftAnchor),
+        mySubview.rightAnchor.constraint(equalTo: view.rightAnchor),
+        
+        mySubview.widthAnchor.constraint(equalToConstant: self.view.frame.width)
+    ]
+    
+    constraints[0].priority = UILayoutPriorityDefaultHigh
+    constraints[1].priority = UILayoutPriorityDefaultHigh
+    
+    NSLayoutConstraint.activate(constraints)
+    
+    return view
+}()
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>BD66652E-D9AE-4B12-9ACA-4E13A65F0055</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>swift - UIScrollView lazy</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

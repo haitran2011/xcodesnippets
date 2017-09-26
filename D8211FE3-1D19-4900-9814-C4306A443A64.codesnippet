@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>swcci</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>func createCircularImage(width: CGFloat, height: CGFloat) -&gt; UIImage? {
+    UIGraphicsBeginImageContextWithOptions(CGSize(width: width, height: height), false, 0)
+    if let context = UIGraphicsGetCurrentContext() {
+        context.saveGState()
+        context.setFillColor(UIColor.red.cgColor)
+        context.fillEllipse(in: CGRect(x: 0, y: 0, width: width, height: height))
+        context.restoreGState()
+        let image = UIGraphicsGetImageFromCurrentImageContext()!
+        UIGraphicsEndImageContext()
+        return image
+    }
+    return nil
+}
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>D8211FE3-1D19-4900-9814-C4306A443A64</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>swift - Create Circular Image</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

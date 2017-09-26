@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>swcsi</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>static var Image: UIImage?
+class func setupImage(dimension: CGFloat) {
+    let width = dimension
+    let height = dimension
+    
+    UIGraphicsBeginImageContextWithOptions(CGSize(width: width, height: height), false, 0)
+    if let context = UIGraphicsGetCurrentContext() {
+        
+        context.setFillColor(UIColor.green.cgColor)
+        context.fill(CGRect(x: 0, y: 0, width: width, height: height))
+        
+        let outerClippingPath = UIBezierPath(roundedRect: CGRect(origin: CGPoint.zero, size: CGSize(width: width, height: height)), cornerRadius: width/2)
+        outerClippingPath.addClip()
+        
+        context.setFillColor(UIColor.blue.cgColor)
+        context.fill(CGRect(x: 0, y: 0, width: width, height: height))
+        
+        let innerClippingPath = UIBezierPath(roundedRect: CGRect(origin: CGPoint(x: 2, y: 2), size: CGSize(width: width-4, height: height-4)), cornerRadius: (width-4)/2)
+        innerClippingPath.addClip()
+        
+        context.setFillColor(UIColor.orange.cgColor)
+        context.fill(CGRect(x: 0, y: 0, width: width, height: height))
+        
+        if let image = UIGraphicsGetImageFromCurrentImageContext() {
+            HomeBFriendCell.OutlineImage = image
+        }
+        
+        UIGraphicsEndImageContext()
+    }
+}
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>7C7EC31A-B1AF-4C19-B3B9-EE6DC1913E0C</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>swift - Create Static Image</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
